@@ -12,11 +12,6 @@ class Wufoo < ActiveRecord::Base
     form = wufoo.forms.first
   end
 
-  def self.set_webhook(form)
-    # form.add_webhook('http://requestb.in/16k1xzq1', true)
-    form.add_webhook('http://requestb.in/16k1xzq1', true)
-  end
-
 
   def self.test_submit
     auth = self.authenticate
@@ -25,7 +20,6 @@ class Wufoo < ActiveRecord::Base
     result = form.submit({
       'Field9' => 'ian@testing.com'
     })
-
 
 
     if result['Success'] == 0
