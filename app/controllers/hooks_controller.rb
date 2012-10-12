@@ -3,7 +3,7 @@ class HooksController < ApplicationController
 
   def receiver
 
-    @data = JSON.parse(request.body)
+    @data = JSON.parse(env['rack.input'].gets)
     Rails.logger.info "********** #{@data}"
     Rails.logger.info "********** #{@data['merge_id']}"
     Rails.logger.info "********** #{@data['file_name']}"
