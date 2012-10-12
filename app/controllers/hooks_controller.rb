@@ -3,7 +3,7 @@ class HooksController < ApplicationController
 
   def receiver
 
-    @data = request.body
+    @data = request.body.read
     # @data_json = JSON.parse(request.body.read)
 
     # respond_to do |format|
