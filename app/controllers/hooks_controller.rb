@@ -3,7 +3,7 @@ class HooksController < ApplicationController
 
   def receiver
 
-    @data = request.body.read
+    @data = JSON.parse(request.body)
     Rails.logger.info "********** #{@data}"
     Rails.logger.info "********** #{@data['merge_id']}"
     Rails.logger.info "********** #{@data['file_name']}"
@@ -12,9 +12,6 @@ class HooksController < ApplicationController
     @file = @data['file_contents']
     # @data_json = JSON.parse(request.body.read)
 
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    render 'hooks/receiver'
   end
 end
