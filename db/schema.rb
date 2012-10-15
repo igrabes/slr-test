@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013193348) do
+ActiveRecord::Schema.define(:version => 20121015130956) do
 
   create_table "pdfs", :force => true do |t|
     t.string   "merge_id"
     t.string   "file_name"
-    t.string   "file"
+    t.text     "file"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
