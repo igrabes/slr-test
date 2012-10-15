@@ -1,17 +1,25 @@
 class HooksController < ApplicationController
-  require 'json'
 
-  def receiver
+  # def receiver
 
-    @data = JSON.parse(env['rack.input'].gets)
-    Rails.logger.info "********** #{@data}"
-    Rails.logger.info "********** #{@data['merge_id']}"
-    Rails.logger.info "********** #{@data['file_name']}"
-    @merge_id = @data['merge_id']
-    @file_name = @data['file_name']
-    @file = @data['file_contents']
-    # @data_json = JSON.parse(request.body.read)
+    # Rails.logger.debug "***************** MERGE_ID" if params[:merge_id]
+     # if request.request_method_symbol == :post
+       # Pdf.create!(
+        # :merge_id => params['merge_id'],
+        # :file_name => params['file_name'],
+        # :file => params['file_contents']
+       # )
+     # end
+    # if
+     # respond_to do |format|
+      # format.html {
+        # if @merge_id
+          # raise "Successfully updated contact email."
+        # else
+          # raise  "NOT Successfully updated contact email."
+        # end
+      # }
+    # end
+  # end
 
-    render 'hooks/receiver'
-  end
 end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  merge_id: MyString
+  file_name: MyString
+  file: MyString
+
+two:
+  merge_id: MyString
+  file_name: MyString
+  file: MyString

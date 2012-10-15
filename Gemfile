@@ -14,6 +14,7 @@ group :production do
 end
 gem 'wuparty'
 gem 'json'
+gem 'debugger'
 
 
 # Gems used only for assets and not required

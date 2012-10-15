@@ -1,0 +1,17 @@
+<h1> Index </h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th></th>
+  </tr>
+
+<% @pdfs.each do |pdf| %>
+  <tr>
+    <td><%= pdf.id %></td>
+    <td><%= pdf.merge_id %></td>
+    <td><%= pdf.file_name %></td>
+  </tr>
+<% end %>
+</table>

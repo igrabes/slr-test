@@ -2,9 +2,14 @@ Slr::Application.routes.draw do
 
 
 
+  resources :users
+
   root :to => 'pages#index'
 
-  match '/hooks' => 'hooks#receiver'
+  resources :pdfs
+  match '/user_hooks' => 'users#receiver', :via => [:post]
+  match '/pdf_hooks' => 'pdfs#receiver', :via => [:get, :post]
+  match '/thankyou' => 'pages#thankyou'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
